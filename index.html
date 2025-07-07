@@ -1,0 +1,215 @@
+<html lang="en-us">
+  <head>
+    <title>Portfolio - Front-End Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Kinza Ijaz" />
+    <meta name="keywords" content="front-end developer, web developer, Figma to HTML, HTML, CSS, JavaScript, front end" />
+    <meta name="description" content="A front-end developer's portfolio website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/style.css">
+    <!-- font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body class="color-light lato-regular">
+    <header class="w-100" id="header">
+      <div class="container">
+        <div class="d-flex flex-row w-100 justify-space-between lato-regular align-center">
+          <div id="logo">
+            <pre>&lt;ki&gt;</pre>
+          </div>
+          <nav>
+            <i class="fa fa-bars" id="responsive-bars" onclick="menuToggle()" aria-label="Toggle menu"></i>
+            <ul class="gap-2" id="nav-menu"  role="navigation">
+              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-user"></i> About</a></li>
+              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-code"></i> Skills</a></li>
+              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-briefcase"></i> Experience</a></li>
+              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+      <section id="intro">
+        <div class="container">
+          <div class="d-grid grid-50 h-full justify-center align-center gap-sm-3">
+            <div>
+              <p>
+                <span class="text-blue font-monospace">Hello, I'm</span>
+                <span class="myName">
+                  <span class="text-white">FrontEnd</span>
+                  <br>
+                  <span class="color-gradient">Developer</span>  
+                </span>
+                passionate about turning ideas into beautiful, 
+                functional websites using React and modern web technologies.
+              </p>
+              <div class="btns">
+                <button class="btn btn-gradient">Contact me</button>
+                <button class="btn btn-outline">Learn More</button>
+              </div>
+              <div class="d-flex gap-15">
+                <a class="no-underline" href="https://wa.me/923114080342" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/kinza-ijaz/" target="_blank" title="LinkedIn"> <i class="fa fa-linkedin"></i> </a>
+                <a href="mailto:kinzaij@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+            <div>
+              <div class="code-box">
+                <div class="d-flex align-center">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-orange"></span>
+                  <span class="dot dot-green"></span>
+                  developer.js
+                </div>
+                <pre class="line-numbers" id="line-numbers"></pre>
+                <span class="code"><pre id="typed-code"></pre><span class="cursor"></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------ABOUT --------- -->
+       <section id="about">
+        <div class="container">
+          <h2 class="text-white text-center">About <span class="text-blue">Me</span></h2>
+          <div class="heading-underline"></div>
+          <div class="grid gap-sm-3 justify-center align-center">
+            <div class="card card-1">
+              <h3 class="text-white">MY Journey</h3>
+              <p>
+                I'm a passionate frontend developer with a love for creating beautiful, 
+                functional web experiences. My journey began with curiosity about how websites 
+                work, and it has evolved into a career focused  on modern web technologies and 
+                user experience.
+              </p>
+              <p>
+                Through my freelance work on Fiverr, I've helped clients bring their visions to 
+                life, focusing on responsive design, performance optimization, and clean, maintainable 
+                code. I believe great development combines technical skill with creative problem-solving.
+              </p>
+            </div>
+            <div class="card zoom card-2">
+              <div class="d-flex flex-row gap-1 justify-start align-center">
+                <div class="icon gradient-box"><i class="fa fa-code"></i></div>
+                <div class="content">
+                  <h4 class="text-white">Clean Code</h4>
+                  <p>Writing maintainable, scalable code that follows best practices</p>
+                </div>
+              </div>
+            </div>
+            <div class="card zoom card-3">
+              <div class="d-flex flex-row gap-1 justify-start align-center">
+                <div class="icon gradient-box"><i class="fa fa-bolt"></i></div>
+                <div class="content">
+                  <h4 class="text-white">Fast Delivery</h4>
+                  <p>Quick turnaround times without compromising on quality</p>
+                </div>
+              </div>
+            </div>
+            <div class="card zoom card-4">
+              <div class="d-flex flex-row gap-1 justify-start align-center">
+                <div class="icon gradient-box"><i class="fa fa-users"></i></div>
+                <div class="content">
+                  <h4 class="text-white">Client Focus</h4>
+                  <p>Understanding client needs and delivering beyond expectations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+       <!-- Skills -->
+       <section id="skills">
+        <div class="container">
+          <h2 class="text-white text-center">My <span class="text-blue">Skills</span></h2>
+          <div class="heading-underline"></div>
+          <p class="text-center head-descr">Technologies and tools I use to bring ideas to life</p>
+          <div class="d-grid mt-st grid-50 gap-sm-3 justify-center align-start">
+            <div class="loaders">
+              <h3 class="text-white"><span class="vertical-gradient"></span>Technical Skills</h3>
+              <div class="d-flex flex-column mt-sm-st gap-2">
+                <div class="load-bar">
+                  <div class="d-flex justify-space-between">
+                    <span>HTML</span>
+                    <span>95%</span>
+                  </div>
+                  <div class="percentage-bar load-95"></div>
+                </div>
+                <div class="load-bar">
+                  <div class="d-flex justify-space-between">
+                    <span>CSS</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="percentage-bar load-90"></div>
+                </div>
+                <div class="load-bar">
+                  <div class="d-flex justify-space-between">
+                    <span>JavaScript</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="percentage-bar load-80"></div>
+                </div>
+                <div class="load-bar">
+                  <div class="d-flex justify-space-between">
+                    <span>Bootstrip</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="percentage-bar load-85"></div>
+                </div>
+                <div class="load-bar">
+                  <div class="d-flex justify-space-between">
+                    <span>Tailwind CSS</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="percentage-bar load-75"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tags">
+              <h3 class="text-white"><span class="vertical-gradient"></span>Tools & Technologies</h3>
+              <div class="d-grid gap-15">
+                <span class="tag zoom">HTML</span>
+                <span class="tag zoom">CSS</span>
+                <span class="tag zoom">Javascript</span>
+                <span class="tag zoom">Bootstrap</span>
+                <span class="tag zoom">VS Code</span>
+                <span class="tag zoom">Git</span>
+                <span class="tag zoom">Figma</span>
+                <span class="tag zoom">Chrome DevTools</span>
+              </div>
+              <div class="card mt-sm-st card-light d-flex flex-column gap-1">
+                <h5 class="text-white">What I bring</h5>
+                <div class="d-flex align-center">
+                  <span class="bullet"></span>
+                  <p>Modern, responsive web applications</p>
+                </div>
+                <div class="d-flex align-center">
+                  <span class="bullet"></span>
+                  <p>Performance-optimized solutions</p>
+                </div>
+                <div class="d-flex align-center">
+                  <span class="bullet"></span>
+                  <p>Cross-browser compatibility</p>
+                </div>
+                <div class="d-flex align-center">
+                  <span class="bullet"></span>
+                  <p>SEO-friendly development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+    </main>
+    <script src="src/script.js"></script>
+  </body>
+</html>
