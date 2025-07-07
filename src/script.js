@@ -24,7 +24,7 @@ window.addEventListener("scroll", function(){
  const lines = [
     "const developer = {",
     "  name: 'Kinza Ijaz',",
-    "  skills: ['HTML', 'JavaScript', 'CSS'],",
+    "  title: 'Frontend Developer',",
     "  experience: 'Fiverr Freelancer',",
     "  passion: 'Creating Amazing UIs',",
     "  status: 'Available'",

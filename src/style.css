@@ -272,7 +272,7 @@ nav i{
   right: 1.5rem;
   left: 1.5rem;
   top: 75px;
-  background: #1b2a42;
+  background: #2d3c55;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 1px 1px 2px #1d1d1d;
@@ -289,7 +289,7 @@ nav i{
 #intro span{
   font-size: 0.8rem;
 }
-#intro span.myName span{
+#intro h1.myName span{
   font-size: 3rem;
 }
 
@@ -303,7 +303,7 @@ nav i{
 #intro p{
   font-size: 1rem;
   line-height: normal;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 #intro a{
@@ -333,7 +333,7 @@ nav i{
   border-radius: 10px;
   padding: 1.3rem;
   border: 1px solid #47476d;
-  font-size: 0.65rem;
+  /* font-size: 0.65rem; */
   display: grid;
   grid-template-columns: 15px minmax(0, 1fr);
   gap: 0;
@@ -357,7 +357,7 @@ nav i{
   color: #a1d5ff;
   font-family: monospace;
   /* text-wrap: auto; */
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 }
 
 .cursor {
@@ -377,8 +377,8 @@ nav i{
 
 .dot{
   display: block;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
 }
 
@@ -410,7 +410,6 @@ nav i{
 #about .grid{
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 4rem;
 }
 
 #about p{
@@ -451,7 +450,7 @@ nav i{
 
 .percentage-bar{
   width: 100%;
-  height: 12px;
+  height: 9px;
   background: #493e6da3;
   border-radius: 10px;
   position: relative;
@@ -524,6 +523,17 @@ nav i{
   border-radius: 10px;
 }
 
+
+.head-descr{
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.tag, .load-bar span, #about p, #skills p{
+    font-size: 0.9rem;
+}
+
+
 /* Desktop */
 @media (min-width: 980px) {
 
@@ -560,7 +570,7 @@ nav i{
     padding: 2rem 0 0;
   }
 
-  #intro span.myName span {
+  #intro h1.myName span {
     font-size: 4rem;
   }
 
@@ -601,9 +611,13 @@ h2{
 
 
 @media (min-width: 320px) {
-.code-box pre, .code-box{
-  font-size: 0.65rem;
+.code-box pre{
+  font-size: 0.75rem;
   /* text-wrap: revert; */
+}
+
+.code-box{
+  font-size: 1rem;
 }
 
   .code-box div{
@@ -612,8 +626,8 @@ h2{
 }
 
 @media (min-width: 385px) {
-.code-box pre, .code-box{
-  font-size: 0.8rem;
+.code-box pre{
+  font-size: 0.85rem;
   /* text-wrap: revert; */
 }
 
@@ -645,6 +659,7 @@ h2{
 
   #intro p{
     font-size: 1.25rem;
+    letter-spacing: 2px;
   }
 
   #intro span {
@@ -671,16 +686,14 @@ h2{
   margin-top: 1rem;
 }
 
-.head-descr{
-  margin-top: 15px;
-  font-size: 1rem;
-  /* letter-spacing: 1px; */
-}
-
 
 /* h2{
   font-size: 2rem;
 } */
-
-
+.percentage-bar{
+  height: 12px;
+}
+  .tag, .load-bar span, #about p, #skills p{
+    font-size: 1rem;
+  }
 }
