@@ -63,13 +63,13 @@ window.addEventListener("scroll", function(){
         setTimeout(typeNextLine, 30);
       }
     }else{
-      setTimeout(() => {
-        codeElement.textContent = "";
-        lineNumbers.textContent = "";
-        lineIndex= 0;
-        charIndex =0
-        typeNextLine()
-      }, 5000);
+      // setTimeout(() => {
+      //   codeElement.textContent = "";
+      //   lineNumbers.textContent = "";
+      //   lineIndex= 0;
+      //   charIndex =0
+      //   typeNextLine()
+      // }, 5000);
     }
   }
 
