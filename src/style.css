@@ -35,7 +35,10 @@ section{
 .justify-center{justify-content: center;}
 .justify-start{justify-content: start;}
 .justify-space-between{justify-content: space-between;}
+.justify-space-around{justify-content: space-around;}
 .align-center{align-items: center;}
+.align-start{align-items: start;}
+.flex-wrap{flex-wrap: wrap;}
 .gap-1 { gap: 1rem; }
 .gap-sm-4 { gap: 4rem; }
 .gap-sm-3 { gap: 3rem; }
@@ -74,6 +77,10 @@ section{
   text-align: center;
 }
 
+.box-50{
+  border-radius: 50%;
+}
+
 .vertical-gradient{
   background: #1bb9e0;
   background: linear-gradient(71deg, rgba(27, 185, 224, 1) 1%, rgba(0, 92, 115, 1) 95%);
@@ -86,12 +93,17 @@ section{
 }
 
 .color-light{color: var(--light)}
+.color-gray{color: rgb(171, 171, 171)}
 .text-blue{ color: var(--light-blue);}
 .text-white{ color: white;}
 .color-gradient{
   background: linear-gradient(90deg, #c6e0ff, #006d88);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.star{
+  color: #eab308;
 }
 
 .heading-underline{
@@ -457,6 +469,17 @@ nav i{
   margin-top: 10px;
 }
 
+.load-100::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #c641f2;
+  border-radius: 10px;
+}
+
 .load-95::after{
   position: absolute;
   content: "";
@@ -533,8 +556,205 @@ nav i{
     font-size: 0.9rem;
 }
 
+/* experience */
+#experience a{
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+#experience a:hover{
+  text-decoration: underline;
+}
+
+.card{
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+#experience .card:hover{
+  border-color: var(--light-blue);
+}
+
+#experience p{
+  word-spacing: 2px;
+  margin: auto;
+  letter-spacing: 1.2px;
+  margin-top: 1em;
+  max-width: 700px;
+}
+
+.experience-ov{
+  margin-top: 0.5em;
+  flex-wrap: wrap;
+}
+
+#experience .star{
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+
+.text-small{
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+#experience .text-big{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.gap-05{
+  gap: 0.5rem
+}
+
+#experience .flex-res-row{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#experience .flex-res-row div{
+  width: 98%;
+  margin-top: 1.5rem;
+}
+
+.flex-2{
+  flex-wrap: wrap;
+}
+
+#experience .flex-2 p{
+  margin-top: 0;
+  letter-spacing: normal;
+}
+
+.tag-flat{
+  background: #383475;
+  color: var(--light-blue);
+  padding: 2px 14px;
+  border-radius: 20px;
+  border: 1px solid #3c8096;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+
+.flex-2 > div{
+    width: 100%;
+}
+
+footer p{
+  border-top: 1px solid #4a2669;
+  padding: 1rem 0;
+}
 
 /* Desktop */
+
+@media (min-width: 320px) {
+.code-box pre{
+  font-size: 0.75rem;
+}
+
+.code-box{
+  font-size: 1rem;
+}
+
+  .code-box div{
+    gap: 0.45rem;
+  }
+}
+
+@media (min-width: 385px) {
+.code-box pre{
+  font-size: 0.85rem;
+  /* text-wrap: revert; */
+}
+
+  .code-box div{
+    gap: 0.45rem;
+  }
+}
+
+
+
+@media (min-width: 576px) {
+  .code-box pre, .code-box{
+    font-size: 1rem;
+  }
+
+  .code-box{
+    line-height: 2rem;
+    grid-template-columns: 20px minmax(0, 1fr);
+    grid-template-rows: 35px 225px;
+  }
+
+  .dot {
+      width: 0.75rem;
+      height: 0.75rem;
+  }
+
+  .code-box div{
+    gap: 0.45rem;
+  }
+
+  #intro p{
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  #intro span {
+    font-size: 1rem;
+  }
+
+  
+.btn{
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  
+.myName{
+  margin: 1rem 0;
+}
+
+.btns{
+  gap: 2rem;
+}
+
+.heading-underline{
+  width: 120px;
+  margin-top: 1rem;
+}
+
+
+/* h2{
+  font-size: 2rem;
+} */
+.percentage-bar{
+  height: 12px;
+}
+  .tag, .load-bar span, #about p, #skills p{
+    font-size: 1rem;
+  }
+
+  
+  #experience .flex-res-row div{
+    width: 48%;
+    margin-top: 1em;
+  }
+
+  /* .flex-2 > div{
+    width: 98%
+  } */
+
+  
+}
+
+@media (min-width: 775px) {
+.flex-2 > div{
+    width: 48%;
+  }
+}
+
 @media (min-width: 980px) {
 
   #responsive-bars{
@@ -598,6 +818,12 @@ nav i{
     grid-column: 2/3;
   }
 
+
+  #experience .flex-res-row div{
+    width: 22.5%;
+    margin: 0;
+  }
+
   
 section {
     margin-top: 4rem;
@@ -607,93 +833,6 @@ h2{
   font-size: 3rem;
 }
 
+
 }
 
-
-@media (min-width: 320px) {
-.code-box pre{
-  font-size: 0.75rem;
-  /* text-wrap: revert; */
-}
-
-.code-box{
-  font-size: 1rem;
-}
-
-  .code-box div{
-    gap: 0.45rem;
-  }
-}
-
-@media (min-width: 385px) {
-.code-box pre{
-  font-size: 0.85rem;
-  /* text-wrap: revert; */
-}
-
-  .code-box div{
-    gap: 0.45rem;
-  }
-}
-
-
-@media (min-width: 576px) {
-  .code-box pre, .code-box{
-    font-size: 1rem;
-  }
-
-  .code-box{
-    line-height: 2rem;
-    grid-template-columns: 20px minmax(0, 1fr);
-    grid-template-rows: 35px 225px;
-  }
-
-  .dot {
-      width: 0.75rem;
-      height: 0.75rem;
-  }
-
-  .code-box div{
-    gap: 0.45rem;
-  }
-
-  #intro p{
-    font-size: 1.25rem;
-    letter-spacing: 2px;
-  }
-
-  #intro span {
-    font-size: 1rem;
-  }
-
-  
-.btn{
-    padding: 1.2rem;
-    font-size: 1rem;
-  }
-
-  
-.myName{
-  margin: 1rem 0;
-}
-
-.btns{
-  gap: 2rem;
-}
-
-.heading-underline{
-  width: 120px;
-  margin-top: 1rem;
-}
-
-
-/* h2{
-  font-size: 2rem;
-} */
-.percentage-bar{
-  height: 12px;
-}
-  .tag, .load-bar span, #about p, #skills p{
-    font-size: 1rem;
-  }
-}
