@@ -548,6 +548,8 @@ nav i{
 
 
 .head-descr{
+  max-width: 700px;
+  margin: auto;
   margin-top: 15px;
   font-size: 1rem;
 }
@@ -577,15 +579,20 @@ nav i{
 
 #experience p{
   word-spacing: 2px;
-  margin: auto;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   margin-top: 1em;
-  max-width: 700px;
+}
+
+#experience p, .flex-2 p{
+  font-size: 0.9rem;
 }
 
 .experience-ov{
   margin-top: 0.5em;
   flex-wrap: wrap;
+  width: 500px;
+  align-items: start;
+  margin-bottom: 0.3rem;
 }
 
 #experience .star{
@@ -633,7 +640,7 @@ nav i{
   border-radius: 20px;
   border: 1px solid #3c8096;
   line-height: 1.25rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   letter-spacing: 1px;
 }
 
@@ -645,6 +652,8 @@ nav i{
 footer p{
   border-top: 1px solid #4a2669;
   padding: 1rem 0;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
 /* Desktop */
@@ -681,6 +690,10 @@ footer p{
     font-size: 1rem;
   }
 
+  .tag-flat{
+    font-size: 0.8rem;
+  }
+  
   .code-box{
     line-height: 2rem;
     grid-template-columns: 20px minmax(0, 1fr);
@@ -732,7 +745,7 @@ footer p{
 .percentage-bar{
   height: 12px;
 }
-  .tag, .load-bar span, #about p, #skills p{
+  .tag, .load-bar span, #about p, #skills p, #experience p, .flex-2 p{
     font-size: 1rem;
   }
 
