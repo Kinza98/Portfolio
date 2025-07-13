@@ -134,7 +134,7 @@ section{
 }
 
 .btn-gradient:hover{
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 .btn-outline{
@@ -157,7 +157,7 @@ section{
 }
 
 .zoom:hover{
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* fonts */
@@ -261,6 +261,10 @@ nav a, #responsive-bars{
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
+/* nav li i{ */
+  /* color: var(--light-blue); */
+/* } */
 
 nav a:hover,
 #responsive-bars:hover{
@@ -452,7 +456,7 @@ nav i{
 }
 
 .tag:hover{
-  border-color: var(--light-blue);
+  border-color: var(--dark-blue);
 }
 
 .tags .d-grid{
@@ -574,7 +578,7 @@ nav i{
 }
 
 #experience .card:hover{
-  border-color: var(--light-blue);
+  border-color: var(--dark-blue);
 }
 
 #experience p{
@@ -647,6 +651,167 @@ nav i{
 
 .flex-2 > div{
     width: 100%;
+}
+
+/* projects */
+.card-project{
+  width: 100%;
+  border-radius: 20px;
+  background-color: #271547;
+  border: 1px solid #2b2d38;
+  transition: all 0.2s ease;
+}
+
+.card-project:hover{
+  transform: scale(1.02);
+  border-color: var(--dark-blue);
+}
+
+.card-project:hover img{
+  transform: scale(1.02);
+}
+
+.project-img{
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+
+.project-img img{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.project-details{
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project-details p{
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+.feature-point{
+  margin-bottom: 0.5em;
+}
+
+.feature-point i{
+  color: var(--light-blue);
+  width: 20px;
+  font-size: 1.1rem;
+}
+
+.feature-point span{
+  font-size: 0.9rem;
+}
+
+.card-project button a,
+form button a
+{
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.card-project button i,
+form button i
+{
+  margin-right: 7px;
+}
+
+.card-project button,
+form button{
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-top: 1em;
+}
+
+.card-project 
+button:hover{
+  transform: none;
+  cursor: pointer;
+}
+
+.feature-heading{
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* COntact */
+
+input,
+textarea{
+  outline: none;
+  border: 1px solid #475569;
+  box-shadow: none;
+  padding: 15px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  background-color: #343058;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+textarea{
+  resize: none;
+}
+
+input:focus,
+textarea:focus{
+  border-color: var(--light-blue);
+}
+
+label{
+  font-weight: bold;
+  /* margin-bottom: 5px; */
+  font-size: 1rem;
+}
+
+h3 i{
+  margin-right: 0.8rem;
+}
+
+#contact .card{
+  border-radius: 10px;
+}
+
+.contact-ov .card:hover{
+  border-color: var(--dark-blue);
+}
+
+
+.contact-form,
+.contact-ov{
+  width: 100%;
+}
+
+#contact button a{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#contact button:hover{
+  box-shadow: 5px 5px 10px #38366d;
+  transform: scale(1.02);
 }
 
 footer p{
@@ -758,6 +923,7 @@ footer p{
   /* .flex-2 > div{
     width: 98%
   } */
+   
 
   
 }
@@ -838,14 +1004,38 @@ footer p{
   }
 
   
-section {
-    margin-top: 4rem;
-}
+  section {
+      margin-top: 6rem;
+  }
 
 h2{
   font-size: 3rem;
 }
 
+.card-project{
+  width: 31%;
+}
 
+.project-details p,
+.feature-point span,
+.feature-heading{
+  font-size: 1rem;
+}
+
+.card-project button a,
+form button a{
+  font-size: 0.9rem;
+}
+
+input,
+textarea{
+  font-size: 1rem;
+}
+
+
+  .contact-form,
+  .contact-ov{
+    width: 48%;
+  }
 }
 
