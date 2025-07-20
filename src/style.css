@@ -43,6 +43,7 @@ section{
 .gap-sm-4 { gap: 4rem; }
 .gap-sm-3 { gap: 3rem; }
 .gap-15 { gap: 1.5rem; }
+.gap-sm-15 { gap: 1.5rem; }
 .gap-18 { gap: 1.8rem; }
 .gap-2 { gap: 2rem; }
 .mt-st{ margin-top: 4rem;}
@@ -742,7 +743,9 @@ form button{
   border: none;
   outline: none;
   box-shadow: none;
+  transition: all 0.2s ease;
   margin-top: 1em;
+  cursor: pointer;
 }
 
 .card-project 
@@ -795,6 +798,23 @@ h3 i{
   border-radius: 10px;
 }
 
+.contact-ov > p{
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.contact-ov span,
+.contact-ov p,
+.contact-form label,
+.contact-form input,
+#contact button a{
+  font-size: 0.9rem;
+}
+
+.contact-form{
+  margin-top: 1em;
+}
+
 .contact-ov .card:hover{
   border-color: var(--dark-blue);
 }
@@ -806,7 +826,7 @@ h3 i{
 }
 
 #contact button a{
-  font-size: 1rem;
+  /* font-size: 1rem; */
   font-weight: 400;
 }
 
@@ -1038,5 +1058,23 @@ textarea{
   .contact-ov{
     width: 48%;
   }
+
+  .contact-form{
+    margin-top: 0;
+  }
+
+  .gap-sm-15{
+    gap: 2rem;
+  }
+
+  
+.contact-ov span,
+.contact-ov p,
+.contact-form label,
+.contact-form input,
+#contact button a{
+  font-size: 1rem;
+}
+
 }
 
