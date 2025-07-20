@@ -114,5 +114,8 @@ window.addEventListener("scroll", function(){
   }
 
 
-  window.addEventListener("load", typeNextLine);
+  window.addEventListener("load", function(){
+    document.querySelector(".dot-loader").classList.add("d-none")
+    typeNextLine();
+  });
 
