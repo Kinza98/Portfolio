@@ -11,6 +11,30 @@ function menuToggle(){
     menu.style.display="none";
   }
 }
+let started = false;
+function animateCounters() {
+  let counters = document.querySelectorAll(".percentage-bar");
+  let bgCount = 0;
+
+  let bgColors = [
+    '#c641f2',
+    '#4171f2',
+    '#f6c614',
+    '#f17235',
+    '#16b0b6',
+    '#d344a1',
+    '#40d37c',
+  ];
+
+  counters.forEach(counter => {
+    let target = parseFloat(counter.getAttribute("data-target"));
+    counter.style.setProperty('--after-bg', bgColors[bgCount]);
+    counter.style.setProperty('--after-width', target + "%");
+
+    bgCount = (bgCount + 1) % bgColors.length;
+  });
+}
+
 
 window.addEventListener("scroll", function(){
   if(this.scrollY>0){
@@ -18,6 +42,16 @@ window.addEventListener("scroll", function(){
   }else{
     document.getElementById("header").classList.remove("fixed-header")
   }
+
+  const trigger = document.querySelector('.percentage-bar').getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (trigger < screenHeight && !started) {
+      animateCounters();
+      started = true;
+  //   }else{
+  //     // started = false
+    }
 })
 
 // code typing
