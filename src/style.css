@@ -52,6 +52,7 @@ section{margin-top: 100px;}
 .mt-st{ margin-top: 4rem;}
 .mt-sm-st{ margin-top: 2rem;}
 .text-center{text-align: center;}
+.vertical-top{vertical-align: top;}
 .w-100{ width: 100%;}
 .h-100{ height: 100%;}
 .h-full{  min-height: calc(100vh - 200px);}
@@ -716,7 +717,7 @@ nav i{
   font-size: 0.9rem;
 }
 
-.card-project button a,
+.card-project .btn-gradient span,
 form button a
 {
   text-decoration: none;
@@ -725,13 +726,14 @@ form button a
   font-weight: bold;
 }
 
-.card-project button i,
+.card-project .btn-gradient i,
 form button i
 {
   margin-right: 7px;
 }
 
-.card-project button,
+
+.card-project .btn-gradient,
 form button{
   width: 100%;
   padding: 1em;
@@ -742,10 +744,11 @@ form button{
   transition: all 0.2s ease;
   margin-top: 1em;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-project 
-button:hover{
+.btn-gradient:hover{
   transform: none;
   cursor: pointer;
 }
@@ -801,7 +804,7 @@ h3 i{
 .contact-ov p,
 .contact-form label,
 .contact-form input,
-#contact button a{
+#contact button span{
   font-size: 0.9rem;
 }
 
@@ -818,7 +821,7 @@ h3 i{
   width: 100%;
 }
 
-#contact button a{
+#contact button span{
   font-weight: 400;
 }
 
@@ -834,6 +837,29 @@ footer p{
   letter-spacing: 1px;
 }
 
+/* ---------
+  Scroll to Top Icon
+  ---------- */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  display: none; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+}
 
 /* ========================
   Media Queries
@@ -912,6 +938,7 @@ footer p{
 
 @media (min-width: 775px) {
   .flex-2 > div{ width: 48%;}
+  #scrollTopBtn{ bottom: 40px; right: 40px;}
 }
 
 @media (min-width: 980px) {
@@ -1003,8 +1030,8 @@ footer p{
     font-size: 1rem;
   }
 
-  .card-project button a,
-  form button a{
+  .card-project a span,
+  form button span{
     font-size: 0.9rem;
   }
 
@@ -1034,7 +1061,7 @@ footer p{
   .contact-ov p,
   .contact-form label,
   .contact-form input,
-  #contact button a{
+  #contact button span{
     font-size: 1rem;
   }
 }

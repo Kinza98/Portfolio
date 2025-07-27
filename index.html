@@ -1,8 +1,8 @@
 <html lang="en-us">
   <head>
+    <meta charset="UTF-8" />
     <title>Portfolio - Front-End Developer</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta charset="UTF-8" />
     <meta name="author" content="Kinza Ijaz" />
     <meta name="keywords" content="front-end developer, web developer, Figma to HTML, HTML, CSS, JavaScript, front end" />
     <meta name="description" content="A front-end developer's portfolio website" />
@@ -17,30 +17,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   </head>
   <body class="color-light lato-regular">
+
+    <!-- =========================== 
+                  Page Loader 
+        ===========================  -->
     <div class="dot-loader">
       <span></span><span></span><span></span>
     </div>
+
+    <!-- =========================== 
+                  Header 
+        ===========================  -->
     <header class="w-100" id="header">
       <div class="container">
         <div class="d-flex flex-row w-100 justify-space-between lato-regular align-center">
           <div id="logo">
-            <pre>&lt;ki&gt;</pre>
+            <pre>&lt;ki&gt;</pre> <!-- Logo-->
           </div>
-          <nav>
+          <nav> <!-- Navigation Manu-->
             <i class="fa fa-bars" id="responsive-bars" onclick="menuToggle()" aria-label="Toggle menu"></i>
             <ul class="gap-2" id="nav-menu"  role="navigation">
-              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-home"></i> Home</a></li>
-              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-user"></i> About</a></li>
-              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-code"></i> Skills</a></li>
-              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-briefcase"></i> Experience</a></li>
-              <li class="no-style"><a class="no-underline" href="#"><i class="fa fa-envelope"></i> Contact</a></li>
+              <li class="no-style"><a class="no-underline" href="#intro"><i class="fa fa-home"></i> Home</a></li>
+              <li class="no-style"><a class="no-underline" href="#about"><i class="fa fa-user"></i> About</a></li>
+              <li class="no-style"><a class="no-underline" href="#skills"><i class="fa fa-code"></i> Skills</a></li>
+              <li class="no-style"><a class="no-underline" href="#experience"><i class="fa fa-briefcase"></i> Experience</a></li>
+              <li class="no-style"><a class="no-underline" href="#contact"><i class="fa fa-envelope"></i> Contact</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-    <!-- main section -->
+    <!-- =========================== 
+                Introduction 
+        ===========================  -->
     <main>
       <section id="intro">
         <div class="container">
@@ -58,13 +68,13 @@
                 Passionate about turning ideas into beautiful, functional websites using JavaScript and modern web technologies.
               </p>
               <div class="btns">
-                <button class="btn btn-gradient">Contact me</button>
-                <button class="btn btn-outline">Learn More</button>
+                <button class="btn btn-gradient" aria-label="Contact me">Contact me</button>
+                <button class="btn btn-outline" aria-label="Learn more">Learn More</button>
               </div>
               <div class="d-flex gap-15">
-                <a class="no-underline" href="https://wa.me/923114080342" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a>
-                <a href="https://www.linkedin.com/in/kinza-ijaz/" target="_blank" title="LinkedIn"> <i class="fa fa-linkedin"></i> </a>
-                <a href="mailto:kinzaij@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+                <a rel="noopener noreferrer" class="no-underline" href="https://wa.me/923114080342" target="_blank" title="Whatsapp"><i class="fa fa-whatsapp"></i></a>
+                <a rel="noopener noreferrer" href="https://www.linkedin.com/in/kinza-ijaz/" target="_blank" title="LinkedIn"> <i class="fa fa-linkedin"></i> </a>
+                <a rel="noopener noreferrer" href="mailto:kinzaij@gmail.com" title="Email" target="_blank"><i class="fa fa-envelope"></i></a>
               </div>
             </div>
             <div>
@@ -82,8 +92,11 @@
           </div>
         </div>
       </section>
-      <!-- -------ABOUT --------- -->
-       <section id="about">
+      
+      <!-- =========================== 
+                  About Me 
+        ===========================  -->
+      <section id="about">
         <div class="container">
           <h2 class="text-white text-center">About <span class="text-blue">Me</span></h2>
           <div class="heading-underline"></div>
@@ -130,9 +143,11 @@
             </div>
           </div>
         </div>
-       </section>
-       <!-- Skills -->
-       <section id="skills">
+      </section>
+      <!-- =========================== 
+                  My Skills 
+        ===========================  -->
+      <section id="skills">
         <div class="container">
           <h2 class="text-white text-center">My <span class="text-blue">Skills</span></h2>
           <div class="heading-underline"></div>
@@ -144,49 +159,49 @@
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
                     <span>HTML</span>
-                    <span >0%</span>
+                    <span >95%</span>
                   </div>
                   <div class="percentage-bar load-95" data-target="95"></div>
                 </div>
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
                     <span>CSS</span>
-                    <span >0%</span>
+                    <span >90%</span>
                   </div>
                   <div class="percentage-bar load-90" data-target="90"></div>
                 </div>
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
                     <span>JavaScript</span>
-                    <span >0%</span>
+                    <span >80%</span>
                   </div>
                   <div class="percentage-bar load-80" data-target="80"></div>
                 </div>
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
-                    <span>Bootstrip</span>
-                    <span >0%</span>
+                    <span>Bootstrap</span>
+                    <span >85%</span>
                   </div>
                   <div class="percentage-bar load-85" data-target="85"></div>
                 </div>
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
                     <span>Tailwind CSS</span>
-                    <span >0%</span>
+                    <span >75%</span>
                   </div>
                   <div class="percentage-bar load-75"  data-target="75"></div>
                 </div>
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
                     <span>Responsive Design</span>
-                    <span  >0%</span>
+                    <span  >100%</span>
                   </div>
                   <div class="percentage-bar load-100" data-target="100"></div>
                 </div>
                 <div class="load-bar">
                   <div class="d-flex justify-space-between">
-                    <span>Performance Optimzation</span>
-                    <span >0%</span>
+                    <span>Performance Optimization</span>
+                    <span >95%</span>
                   </div>
                   <div class="percentage-bar load-95"  data-target="95"></div>
                 </div>
@@ -227,7 +242,9 @@
           </div>
         </div>
       </section>
-      <!-- Experience -->
+      <!-- =========================== 
+                  Experience 
+        ===========================  -->
       <section id="experience">
         <div class="container">
           <h2 class="text-white text-center">My <span class="text-blue">Experience</span></h2>
@@ -237,7 +254,7 @@
             <h3 class="text-white">Freelance Frontend Developer</h3>
             <div class="d-flex align-start justify-space-between flex-wrap">
               <div class="d-flex justify-center  flex-column experience-ov">
-                <a href="">Fiverr Platform</a>
+                <a href="https://www.fiverr.com/kinza_98" rel="noopener noreferrer" target="_blank">https://www.fiverr.com/kinza_98</a>
                 <span class="color-gray">2021 - Present</span>
               </div>
               <div> 
@@ -272,7 +289,7 @@
               </div>
               <div class="d-flex flex-column justify-center align-center gap-05">
                 <span class="gradient-box box-50"><i class="fa fa-suitcase"></i></span>
-                <span class="text-white text-big"><2hrs</span>
+                <span class="text-white text-big">&lt;2hrs</span>
                 <span class="">Response time</span>
               </div>
             </div>
@@ -286,7 +303,7 @@
                 <h4 class="text-white">Custom Web Development</h4>
                 <p>Building responsive, modern websites from scratch using React and modern web technologies.</p>
                 <div class="d-flex gap-1 flex-wrap w-100">
-                  <span class="tag-flat">Recat</span>
+                  <span class="tag-flat">React</span>
                   <span class="tag-flat">HTML</span>
                   <span class="tag-flat">CSS</span>
                   <span class="tag-flat">JavaScript</span>
@@ -324,7 +341,9 @@
           </div>
         </section>
       </section>
-      <!-- Projects -->
+      <!-- =========================== 
+                  My Projects 
+        ===========================  -->
       <section id="projects">
         <div class="container">
           <h2 class="text-white text-center">Featured <span class="text-blue">Projects</span></h2>
@@ -361,14 +380,9 @@
                   <span class="tag-flat">HTML</span>
                   <span class="tag-flat">CSS</span>
                 </div>
-                <button class="btn-gradient">
-                  <i class="fa fa-external-link"></i>
-                  <a href="#">View Project</a>
-                </button>
+                <a class="btn-gradient text-center href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> <span class="vertical-top"> View Project </span></a>
               </div>
             </div>
-            <!-- projhect -->
-             
             <div class="card-project">
               <div class="project-img">
                 <img src="img.avif" alt="">
@@ -399,14 +413,9 @@
                   <span class="tag-flat">HTML</span>
                   <span class="tag-flat">CSS</span>
                 </div>
-                <button class="btn-gradient">
-                  <i class="fa fa-external-link"></i>
-                  <a href="#">View Project</a>
-                </button>
+                <a class="btn-gradient text-center href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> <span class="vertical-top"> View Project </span></a>
               </div>
             </div>
-            <!-- projhect -->
-             
             <div class="card-project">
               <div class="project-img">
                 <img src="img.avif" alt="">
@@ -424,8 +433,8 @@
                     <span>Mobile Responsive</span>
                   </div>
                   <div class="feature-point">
-                    <i class="fa fa-"></i>
-                    <span>Modern UI</span>caret-right
+                    <i class="fa fa-caret-right"></i>
+                    <span>Modern UI</span>
                   </div>
                   <div class="feature-point">
                     <i class="fa fa-bolt"></i>
@@ -437,15 +446,15 @@
                   <span class="tag-flat">HTML</span>
                   <span class="tag-flat">CSS</span>
                 </div>
-                <button class="btn-gradient">
-                  <i class="fa fa-external-link"></i>
-                  <a href="#">View Project</a>
-                </button>
+                <a class="btn-gradient text-center href="#" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link"></i> <span class="vertical-top"> View Project </span></a>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- =========================== 
+                  Contact Me 
+        ===========================  -->
       <section id="contact">
         <div class="container">
           <h2 class="text-white text-center">Get In <span class="text-blue">Touch</span></h2>
@@ -509,7 +518,6 @@
             <div class="contact-form card">
                 <h3 class="text-white"><i class="fa fa-envelope-o text-blue"></i>Send Message</h3>
               <form class="d-flex flex-column gap-15 mt-sm-st" method="POST" action="https://formspree.io/f/xblkrgwn">
-                <!-- <div class="d-flex gap-15 flex-wrap"> -->
                   <div class="d-flex flex-column gap-05 w-100 ">
                     <label for="name">Your Name</label>
                     <input type="text" name="name" id="name" placeholder="John Doe">
@@ -518,7 +526,6 @@
                     <label for="email">Your Email</label>
                     <input type="email" name="email" id="email" placeholder="john@gmail.com">
                   </div>
-                <!-- </div> -->
                 <div class="d-flex flex-column gap-05">
                   <label for="subject">Subject</label>
                   <input type="text" name="subject" id="subject" placeholder="Project Discussion">
@@ -529,7 +536,7 @@
                 </div>
                 <button class="btn-gradient">
                   <i class="fa fa-paper-plane"></i>
-                  <a href="#">Send Message</a>
+                  <span>Send Message</span>
                 </button>
               </form>
             </div>
@@ -537,6 +544,9 @@
         </div>
       </section>
     </main>
+    <!-- =========================== 
+                  Footer 
+        ===========================  -->
     <footer class="mt-st">
       <div class="container">
         <p class="text-center">
@@ -544,6 +554,14 @@
         </p>
       </div>
     </footer>
+
+    <!-- =========================== 
+                  Scroll to TOP 
+        ===========================  -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+    <!-- JS Files -->
     <script src="src/script.js"></script>
   </body>
 </html>

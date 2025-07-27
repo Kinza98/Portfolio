@@ -1,3 +1,4 @@
+// TOGGLE MENU Function
 function menuToggle(){
   let menuIcon = document.getElementById("responsive-bars");
   let menu = document.getElementById("nav-menu");
@@ -11,12 +12,14 @@ function menuToggle(){
     menu.style.display="none";
   }
 }
+
+// load percentage bars
 let started = false;
 function animateCounters() {
   let counters = document.querySelectorAll(".percentage-bar");
   let bgCount = 0;
 
-  let bgColors = [
+  let bgColors = [  //color for bars
     '#c641f2',
     '#4171f2',
     '#f6c614',
@@ -30,40 +33,54 @@ function animateCounters() {
     let target = parseFloat(counter.getAttribute("data-target"));
     counter.style.setProperty('--after-bg', bgColors[bgCount]);
     counter.style.setProperty('--after-width', target + "%");
-
     bgCount = (bgCount + 1) % bgColors.length;
   });
 }
 
-
+// ON WINDOW Scroll
 window.addEventListener("scroll", function(){
+
+  // header become fixed on scroll down
   if(this.scrollY>0){
     document.getElementById("header").classList.add("fixed-header")
   }else{
     document.getElementById("header").classList.remove("fixed-header")
   }
 
-  const trigger = document.querySelector('.percentage-bar').getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
+  // 'scroll to top' icon appears when scroll down
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  if (window.scrollY > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
 
-    if (trigger < screenHeight && !started) {
-      animateCounters();
-      started = true;
-  //   }else{
-  //     // started = false
-    }
+  // percentage bars load when scroll comes to their section the first time
+  const trigger = document.querySelector('.percentage-bar')?.getBoundingClientRect().top;
+  if (trigger !== undefined && trigger < window.innerHeight && !started) {
+    animateCounters();
+    started = true;
+  }
 })
 
-// code typing
- const lines = [
-    "const developer = {",
-    "  name: 'Kinza Ijaz',",
-    "  title: 'Frontend Developer',",
-    "  experience: 'Fiverr Freelancer',",
-    "  passion: 'Creating Amazing UIs',",
-    "  status: 'Available'",
-    "};"
-  ];
+// Scroll to top on click
+window.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("scrollTopBtn")?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
+
+// code typing animation
+const lines = [ //code lines
+  "const developer = {",
+  "  name: 'Kinza Ijaz',",
+  "  title: 'Frontend Developer',",
+  "  experience: 'Fiverr Freelancer',",
+  "  passion: 'Creating Amazing UIs',",
+  "  status: 'Available'",
+  "};"
+];
 
   const codeElement = document.getElementById("typed-code");
   const lineNumbers = document.getElementById("line-numbers");
@@ -73,6 +90,8 @@ window.addEventListener("scroll", function(){
   let charIndex = 0;
   let lineIndexCheck = -1;
 
+
+  // code  typing function
   function typeNextLine(){
     const currentLine = lines[lineIndex];
     if (charIndex === 0) {
@@ -87,7 +106,6 @@ window.addEventListener("scroll", function(){
         setTimeout(typeNextLine, 50)
       }else {
         console.log(lineIndex, lines.length)
-        // lineNumbers.textContent += lineIndex+2 + "\n";
         if (lineIndex < lines.length - 1) {
           codeElement.textContent += "\n";
         }
@@ -96,14 +114,6 @@ window.addEventListener("scroll", function(){
         moveCursor();
         setTimeout(typeNextLine, 30);
       }
-    }else{
-      // setTimeout(() => {
-      //   codeElement.textContent = "";
-      //   lineNumbers.textContent = "";
-      //   lineIndex= 0;
-      //   charIndex =0
-      //   typeNextLine()
-      // }, 5000);
     }
   }
 
@@ -114,8 +124,9 @@ window.addEventListener("scroll", function(){
   }
 
 
-  window.addEventListener("load", function(){
-    document.querySelector(".dot-loader").classList.add("d-none")
-    typeNextLine();
-  });
+// on window load, page loader removes
+window.addEventListener("load", function(){
+  document.querySelector(".dot-loader").classList.add("d-none")
+  typeNextLine();
+});
 
