@@ -129,4 +129,3 @@ window.addEventListener("load", function(){
   document.querySelector(".dot-loader").classList.add("d-none")
   typeNextLine();
 });
-
