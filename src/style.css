@@ -676,7 +676,9 @@ nav i {
   width: var(--after-width, 0%);
   background-color: var(--after-bg, #c641f2);
   border-radius: 10px;
-  transition: width 1s ease-in-out, background-color 0.3s ease;
+  transition:
+    width 1s ease-in-out,
+    background-color 0.3s ease;
 }
 
 .tag,
